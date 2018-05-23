@@ -31,6 +31,11 @@ app.get('/',async (req,res)=>{
     res.json(result);
 });
 
+app.get('/test', async (req, res) => {
+    // let result = await User.find({});
+    res.send('hello');
+});
+
 app.post('/mongo',(req,res)=>{
     console.log(req);
     let user = new User({

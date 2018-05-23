@@ -1,0 +1,14 @@
+docker build -t zaynjarvis/appname:version
+docker push zaynjarvis/appname:version
+kubectl create -f filename.yaml
+kubectl apply -f filename.yaml
+kubectl get pod -l app=labelName
+kubectl get pods --show-labels
+kubectl get svc(services)
+minikube service app-service
+kubectl apply -f file.yaml --record
+kubectl rollout status deployment app
+kubectl rollout history deployment app
+kubectl rollout undo deployment app --to-revision=1
+kubectl delete pod app
+kubectl delete deployments app-label

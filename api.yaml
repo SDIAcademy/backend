@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mongo-api
+spec:
+  replicas: 2
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate                                   # 3
+    rollingUpdate: 
+      maxUnavailable: 1                                   # 4
+      maxSurge: 1                                         # 5
+  template:                                               # 6
+    metadata:
+      labels:
+        app: mongo-api                                  # 7
+    spec:
+      containers:
+        - image: zaynjarvis/mongo_api:1.0.0
+          imagePullPolicy: Always                         # 8
+          name: mongo-api
+          ports:
+            - containerPort: 80
