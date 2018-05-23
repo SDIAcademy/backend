@@ -37,7 +37,6 @@ app.get('/test', async (req, res) => {
 });
 
 app.post('/mongo',(req,res)=>{
-    console.log(req);
     let user = new User({
         name: req.body.name,
         email: req.body.email,

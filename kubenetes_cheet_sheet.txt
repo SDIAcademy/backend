@@ -12,3 +12,5 @@ kubectl rollout history deployment app
 kubectl rollout undo deployment app --to-revision=1
 kubectl delete pod app
 kubectl delete deployments app-label
+kubectl logs pod_name
+kubectl describe pods podsname

@@ -16,7 +16,7 @@ spec:
         app: mongo-api                                  # 7
     spec:
       containers:
-        - image: zaynjarvis/mongo_api:1.0.0
+        - image: zaynjarvis/mongo_api:1.0.1
           imagePullPolicy: Always                         # 8
           name: mongo-api
           ports:
