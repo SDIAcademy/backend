@@ -14,3 +14,6 @@ kubectl delete pod app
 kubectl delete deployments app-label
 kubectl logs pod_name
 kubectl describe pods podsname
+
+eval $(minikube docker-env)
+eval $(docker-machine env -u)
